@@ -4,9 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-&led_strip {
-    chain-length = <21>;
-};
+&led_strip { chain-length = <21>; };
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -79,6 +77,8 @@
 &kp LEFT_CONTROL  &kp Q              &kp X  &kp M     &kp C  &kp V        &kp K      &kp P  &kp PERIOD  &kp MINUS  &kp FSLH            &kp ESC
                                             &kp LGUI  &mo 1  &kp SPACE    &kp RET    &mo 2  &kp RALT
             >;
+
+            label = "Graphite";
         };
 
         Keypad {
@@ -91,9 +91,11 @@
             bindings = <
 &none   &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &none     &none     &kp UP_ARROW    &none            &none    &kp BSPC
 &trans  &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
-&trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &to 3     &to 0     &trans          &trans           &trans   &trans
-                              &none   &trans  &none           &kp RET   &trans    &kp RALT
+&trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &tog 3    &to 0     &trans          &trans           &trans   &trans
+                              &none   &mo 1   &none           &kp RET   &trans    &kp RALT
             >;
+
+            label = "Keypad";
         };
 
         Symbols {
@@ -109,6 +111,8 @@
 &kp LSHFT  &trans    &trans  &trans    &trans    &rgb_ug RGB_ON    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE         &kp RET    &trans     &kp RALT
             >;
+
+            label = "Symbols";
         };
 
         Qwerty {
@@ -118,6 +122,8 @@
 &kp LEFT_CONTROL  &kp Z              &kp X  &kp C     &kp V   &kp B        &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH                    &kp ESC
                                             &kp LGUI  &trans  &kp SPACE    &kp RET  &trans  &kp RALT
             >;
+
+            label = "Qwerty";
         };
     };
 };

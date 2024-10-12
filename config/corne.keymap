@@ -8,6 +8,51 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        caps_lock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <5 6>;
+        };
+
+        Caps_Word {
+            bindings = <&caps_word>;
+            key-positions = <17 18>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
+    };
+
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-unless-interrupted";
+            retro-tap;
+            hold-trigger-key-positions = <6 7 8 9 10 11 23 22 21 20 19 18 30 31 32 33 34 35>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+            retro-tap;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -19,10 +64,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp B  &kp L  &kp D     &kp W  &kp Z        &kp COMMA  &kp F  &kp O       &kp U      &kp J     &kp BSPC
-&kp LEFT_SHIFT    &kp N  &kp R  &kp T     &kp S  &kp G        &kp Y      &kp H  &kp A       &kp E      &kp I     &kp SQT
-&kp LEFT_CONTROL  &kp Q  &kp X  &kp M     &kp C  &kp V        &kp K      &kp P  &kp PERIOD  &kp MINUS  &kp FSLH  &kp ESC
-                                &kp LGUI  &mo 1  &kp SPACE    &kp RET    &mo 2  &kp RALT
+&kp ESCAPE        &kp B              &kp L  &kp D     &kp W  &kp Z        &kp COMMA  &kp F  &kp O       &kp U      &kp J               &kp BSPC
+&kp LEFT_SHIFT    &hml LEFT_SHIFT N  &kp R  &kp T     &kp S  &kp G        &kp Y      &kp H  &kp A       &kp E      &hmr RIGHT_SHIFT I  &kp SQT
+&kp LEFT_CONTROL  &kp Q              &kp X  &kp M     &kp C  &kp V        &kp K      &kp P  &kp PERIOD  &kp MINUS  &kp FSLH            &kp ESC
+                                            &kp LGUI  &mo 1  &kp SPACE    &kp RET    &mo 2  &kp RALT
             >;
         };
 
@@ -34,10 +79,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none   &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &none    &none   &none     &none   &none   &kp BSPC
-&trans  &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &none    &none   &none     &none   &trans  &trans
-&trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &to 4    &to 0   &trans    &trans  &trans  &trans
-                              &none   &trans  &none           &kp RET  &trans  &kp RALT
+&none   &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &none     &none     &kp UP_ARROW    &none            &none    &kp BSPC
+&trans  &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
+&trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &to 4     &to 0     &trans          &trans           &trans   &trans
+                              &none   &trans  &none           &kp RET   &trans    &kp RALT
             >;
         };
 

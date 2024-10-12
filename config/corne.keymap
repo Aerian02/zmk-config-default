@@ -126,4 +126,18 @@
             label = "Qwerty";
         };
     };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        keypad_qwerty {
+            if-layers = <3 1>;
+            then-layer = <1>;
+        };
+
+        Symbols_Qwerty {
+            if-layers = <3 2>;
+            then-layer = <2>;
+        };
+    };
 };

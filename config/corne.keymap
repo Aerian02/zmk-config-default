@@ -72,10 +72,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp B              &kp L  &kp D     &kp W  &kp Z        &kp COMMA  &kp F  &kp O       &kp U      &kp J               &kp BSPC
-&kp LEFT_SHIFT    &hml LEFT_SHIFT N  &kp R  &kp T     &kp S  &kp G        &kp Y      &kp H  &kp A       &kp E      &hmr RIGHT_SHIFT I  &kp SQT
-&kp LEFT_CONTROL  &kp Q              &kp X  &kp M     &kp C  &kp V        &kp K      &kp P  &kp PERIOD  &kp MINUS  &kp FSLH            &kp DELETE
-                                            &kp LGUI  &mo 2  &kp SPACE    &kp RET    &mo 3  &kp RALT
+&kp ESCAPE        &kp B              &kp L  &kp D         &kp W  &kp Z        &kp COMMA  &kp F  &kp O         &kp U      &kp J               &kp BSPC
+&kp LEFT_SHIFT    &hml LEFT_SHIFT N  &kp R  &kp T         &kp S  &kp G        &kp Y      &kp H  &kp A         &kp E      &hmr RIGHT_SHIFT I  &kp SQT
+&kp LEFT_CONTROL  &kp Q              &kp X  &kp M         &kp C  &kp V        &kp K      &kp P  &kp PERIOD    &kp MINUS  &kp FSLH            &kp DELETE
+                                            &kp LEFT_ALT  &mo 2  &kp SPACE    &kp RET    &mo 3  &kp LEFT_WIN
             >;
 
             label = "Graphite";
@@ -117,9 +117,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK      &kp LPAR          &kp RPAR  &kp BSPC
+&trans   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT       &kp RBKT          &kp BSLH  &kp GRAVE
+&trans   &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LESS_THAN  &kp GREATER_THAN  &kp PIPE  &kp TILDE
                            &trans    &trans    &trans       &trans     &trans     &trans
             >;
 

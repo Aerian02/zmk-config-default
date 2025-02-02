@@ -102,7 +102,7 @@
             bindings = <
 &kp C_VOLUME_UP  &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &rgb_ug RGB_COLOR_HSB(80,100,51)  &rgb_ug RGB_EFR  &kp UP_ARROW     &rgb_ug RGB_EFF  &none            &kp BSPC
 &kp C_MUTE       &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &kp HOME                          &kp LEFT         &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp END          &rgb_ug RGB_BRI
-&kp C_VOL_DN     &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &none                             &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD
+&kp C_VOL_DN     &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &studio_unlock                    &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD
                                        &none   &trans  &none           &kp RET                           &trans           &kp RALT
             >;
 

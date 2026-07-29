@@ -33,6 +33,21 @@
             bindings = <&tog 1>;
             key-positions = <35 34>;
         };
+
+        L_Meta {
+            bindings = <&kp LEFT_META>;
+            key-positions = <26 27>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <27 28>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <25 26>;
+        };
     };
 
     behaviors {
@@ -72,10 +87,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp B              &kp L  &kp D         &kp W  &kp Z        &kp SEMICOLON  &kp F  &kp O         &kp U       &kp J               &kp BSPC
-&kp LEFT_SHIFT    &hml LEFT_SHIFT N  &kp R  &kp T         &kp S  &kp G        &kp Y          &kp H  &kp A         &kp E       &hmr RIGHT_SHIFT I  &kp SQT
-&kp LEFT_CONTROL  &kp Q              &kp X  &kp M         &kp C  &kp V        &kp K          &kp P  &kp COMMA     &kp PERIOD  &kp FSLH            &kp DELETE
-                                            &kp LEFT_ALT  &mo 2  &kp SPACE    &kp RET        &mo 3  &kp LEFT_WIN
+&kp ESCAPE        &kp B  &kp L  &kp D         &kp W  &kp Z        &kp SEMICOLON  &kp F  &kp O         &kp U       &kp J     &kp BSPC
+&kp LEFT_SHIFT    &kp N  &kp R  &kp T         &kp S  &kp G        &kp Y          &kp H  &kp A         &kp E       &kp I     &hmr RIGHT_SHIFT APOSTROPHE
+&kp LEFT_CONTROL  &kp Q  &kp X  &kp M         &kp C  &kp V        &kp K          &kp P  &kp COMMA     &kp PERIOD  &kp FSLH  &kp DELETE
+                                &kp LEFT_ALT  &mo 2  &kp SPACE    &kp RET        &mo 3  &kp LEFT_WIN
             >;
 
             label = "Graphite";
@@ -100,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_VOLUME_UP  &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &rgb_ug RGB_ON  &rgb_ug RGB_EFR  &kp UP_ARROW     &rgb_ug RGB_EFF  &none            &kp BSPC
-&kp C_MUTE       &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &kp HOME        &kp LEFT         &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp END          &rgb_ug RGB_BRI
-&kp C_VOL_DN     &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &studio_unlock  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD
-                                       &none   &trans  &none           &kp RET         &trans           &kp RALT
+&trans  &kp LS(STAR)  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &rgb_ug RGB_ON  &rgb_ug RGB_EFR  &kp UP_ARROW     &rgb_ug RGB_EFF  &none            &kp BSPC
+&trans  &kp FSLH      &kp N4  &kp N5  &kp N6  &kp MINUS       &kp HOME        &kp LEFT         &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp END          &rgb_ug RGB_BRI
+&trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT         &studio_unlock  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD
+                              &none   &trans  &none           &kp RET         &trans           &kp RALT
             >;
 
             label = "Keypad";
